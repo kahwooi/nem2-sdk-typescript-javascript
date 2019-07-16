@@ -152,7 +152,7 @@ export const encodeBlock = (input, inputOffset, output, outputOffset) => {
 };
 
 export const Char_To_Decoded_Char_Map = () => {
-    const builder = this.createBuilder();
+    const builder = createBuilder();
     builder.addRange('A', 'Z', 0);
     builder.addRange('2', '7', 26);
     return builder.map;
@@ -168,8 +168,8 @@ export const decodeChar = (c) => {
 };
 
 export const decodeBlock = (input, inputOffset, output, outputOffset) => {
-    const bytes = new Uint8Array(this.Encoded_Block_Size);
-    for (let i = 0; i < this.Encoded_Block_Size; ++i) {
+    const bytes = new Uint8Array(Encoded_Block_Size);
+    for (let i = 0; i < Encoded_Block_Size; ++i) {
         bytes[i] = decodeChar(input[inputOffset + i]);
     }
 
