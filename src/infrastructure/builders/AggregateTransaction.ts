@@ -24,7 +24,7 @@ import AggregateTransactionSchema from '../schemas/AggregateTransactionSchema';
 import { CosignatureTransaction} from './CosignatureTransaction';
 import { VerifiableTransaction } from './VerifiableTransaction';
 
-import {flatbuffers} from 'flatbuffers';
+import 'flatbuffers';
 
 const {
     AggregateTransactionBuffer,
